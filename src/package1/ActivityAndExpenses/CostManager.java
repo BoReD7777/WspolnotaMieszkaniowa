@@ -1,4 +1,4 @@
-package package1.Model;
+package package1.House;
 
 import java.util.Scanner;
 
