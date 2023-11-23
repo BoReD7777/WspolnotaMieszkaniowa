@@ -1,4 +1,8 @@
-package package1.Model;
+package package1.House;
+
+import package1.ActivityAndExpenses.CommunityServices;
+import package1.ActivityAndExpenses.CostManager;
+import package1.People.Person;
 
 import java.util.ArrayList;
 import java.util.List;

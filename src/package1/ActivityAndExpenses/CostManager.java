@@ -1,4 +1,7 @@
-package package1.House;
+package package1.ActivityAndExpenses;
+
+import package1.House.House;
+import package1.House.LuxuryHouse;
 
 import java.util.Scanner;
 

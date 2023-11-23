@@ -1,4 +1,4 @@
-package package1.House;
+package package1.ActivityAndExpenses;
 
 public class CommunityServices {
 }

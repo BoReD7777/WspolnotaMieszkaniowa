@@ -1,4 +1,6 @@
-package package1.Model;
+package package1.House;
+
+import package1.ActivityAndExpenses.CostManager;
 
 public class LuxuryHouse extends House{
 

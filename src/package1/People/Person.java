@@ -1,4 +1,6 @@
-package package1.Model;
+package package1.People;
+
+import package1.House.House;
 
 public class Person {
 
