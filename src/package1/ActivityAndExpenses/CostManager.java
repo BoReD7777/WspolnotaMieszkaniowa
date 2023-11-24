@@ -14,6 +14,7 @@ public class CostManager {
     private double internetCost;
     private double sewageCost;
     private double garbageDisposalFee;
+    private double solarPanelUsage;
 
     public double getMaintenanceCost() {
         return maintenanceCost;
@@ -71,6 +72,14 @@ public class CostManager {
         this.garbageDisposalFee = garbageDisposalFee;
     }
 
+    public double getSolarPanelUsage() {
+        return solarPanelUsage;
+    }
+
+    public void setSolarPanelUsage(double solarPanelUsage) {
+        this.solarPanelUsage = solarPanelUsage;
+    }
+
     private static final double WATER_COST_RATE = 4.27;
     private static final double ELECTRICITY_COST_RATE = 1.41;
     private static final double GAS_COST_RATE = 1.24;
@@ -79,14 +88,15 @@ public class CostManager {
 
 
 
-    public CostManager(double maintenanceCost, double waterCost, double electricityCost, double gasCost, double internetCost) {
+    public CostManager(double maintenanceCost, double waterCost, double electricityCost, double gasCost, double internetCost,double garbageDisposalFee,double solarPanelUsage ) {
         this.maintenanceCost = maintenanceCost;
         this.waterCost = waterCost;
         this.electricityCost = electricityCost;
         this.gasCost = gasCost;
         this.internetCost = internetCost;
-        this.sewageCost = 0.0;
         this.garbageDisposalFee = 0.0;
+        this.sewageCost = 0.0;
+        this.solarPanelUsage = solarPanelUsage;
     }
 
 
@@ -94,7 +104,7 @@ public class CostManager {
         return maintenanceCost + waterCost + electricityCost + gasCost + internetCost + sewageCost + garbageDisposalFee;
     }
 
-    public void updateWaterUsage(){
+    public void updateWaterUsage(LuxuryHouse userHouse){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter water usage in cubic meters: ");
         double waterUsage = scanner.nextDouble();
@@ -113,14 +123,14 @@ public class CostManager {
         }
     }
 
-    public void updateGasUsage(){
+    public void updateGasUsage(LuxuryHouse userHouse){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter gas usage in cubic meters: ");
         double gasUsage = scanner.nextDouble();
         this.gasCost = gasUsage * GAS_COST_RATE;
     }
 
-    public void updateInternetUsage() {
+    public void updateInternetUsage(LuxuryHouse userHouse) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter internet usage in giga bytes: ");
         double internetUsage = scanner.nextDouble();

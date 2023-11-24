@@ -17,19 +17,16 @@ public class LuxuryHouse extends House{
 
 
 
-    public LuxuryHouse(int houseNumber, CostManager costManager, boolean hasPool, int numberOfRooms,
+    public LuxuryHouse(int houseNumber, boolean hasPool, int numberOfRooms,
                        int houseSize, int propertySize, boolean hasGarden, boolean hasSolarPanels,
-                       double solarPanelUsage, double electricityUsage, int cost, String address,
-                       boolean isFurnished) {
-        super(houseNumber, costManager, cost, address);
+                       int cost, String address, boolean isFurnished) {
+        super(houseNumber, cost, address);
         this.hasPool = hasPool;
         this.numberOfRooms = numberOfRooms;
         this.houseSize = houseSize;
         this.propertySize = propertySize;
         this.hasGarden = hasGarden;
         this.hasSolarPanels = hasSolarPanels;
-        this.solarPanelUsage = solarPanelUsage;
-        this.electricityUsage = 0.0;
         this.isFurnished = isFurnished;
     }
 

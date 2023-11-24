@@ -9,20 +9,73 @@ public class Person {
     private int age;
     private String occupation;
     private String email;
-    private String phoneNumber;
+    private int phoneNumber;
     private House house;
 
-    public Person(String firstName, String lastName, int age, String occupation, String email, String phoneNumber, House house) {
+    public Person(String firstName, String lastName, int age, String occupation, String email, int phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.occupation = occupation;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.house = house;
     }
 
     public void setHouse(House house) {
         this.house = house;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public House getHouse() {
+        return house;
+    }
+
+
 }
