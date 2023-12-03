@@ -1,23 +1,22 @@
 package package1.House;
-import package1.ActivityAndExpenses.CommunityServices;
 import package1.People.Person;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class House{
 
     private int houseNumber;
     private int cost;
-    private String address;
-    private List<Person> occupants;
-    private List<CommunityServices> services;
+    private static String address;
+    private static List<Person> occupants;
+    private static int occupantCount;
+
 
 
     public House(int houseNumber, int cost, String address) {
         this.houseNumber = houseNumber;
         this.occupants = new ArrayList<>();
-        this.services = new ArrayList<>();
         this.cost = cost;
         this.address = address;
     }
@@ -25,12 +24,28 @@ public class House{
 
 
     public void addOccupant(Person person){
+        if(occupantCount < occupants.toArray().length){
+            occupants.set(occupantCount++, person);
+        }else{
+            System.out.println("House is full");
+        }
         occupants.add(person);
     }
 
     public void removeOccupant(Person person){
-        occupants.remove(person);
+        for(int i = 0; i < occupantCount; i++){
+            if(occupants.get(i).equals(person)){
+                for(int j = i; j < occupantCount - 1; j++){
+                    occupants.set(j, occupants.get(j + 1)); {
+                            occupants.set(--occupantCount, null);
+                            return;
+                    }
+                }
+                System.out.println("Occupant not found in the house");
+            }
+        }
     }
+
 
     public List<Person> getOccupants() {
         return occupants;
@@ -48,12 +63,12 @@ public class House{
         this.houseNumber = houseNumber;
     }
 
-    public List<CommunityServices> getServices() {
-        return services;
+    public int getOccupantCount() {
+        return occupantCount;
     }
 
-    public void setServices(List<CommunityServices> services) {
-        this.services = services;
+    public void setOccupantCount(int occupantCount) {
+        this.occupantCount = occupantCount;
     }
 
     public int getCost() {

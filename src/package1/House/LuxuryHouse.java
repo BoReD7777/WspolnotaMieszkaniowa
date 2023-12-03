@@ -4,7 +4,7 @@ import package1.ActivityAndExpenses.CostManager;
 
 public class LuxuryHouse extends House{
 
-    private int numberOfRooms;
+    private static int numberOfRooms;
     private int houseSize;
     private int propertySize;
     private int cost;
@@ -38,7 +38,7 @@ public class LuxuryHouse extends House{
         this.hasPool = hasPool;
     }
 
-    public int getNumberOfRooms() {
+    public static int getNumberOfRooms() {
         return numberOfRooms;
     }
 
